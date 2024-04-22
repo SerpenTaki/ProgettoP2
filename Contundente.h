@@ -1,1 +1,0 @@
-class contundente : public Sensore {};
