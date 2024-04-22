@@ -1,11 +1,21 @@
-#include <string>
-class Sensore {
-  const double max_vita = 10000;
-  const double min_vita = 0;
-  double vita;
+#ifndef SENSORE_H
+#define SENSORE_H
 
+#include <string>
+
+
+class Sensore {
+private:
+  double vita;
+  bool isAlive;
+  double danno;
 public:
   Sensore();
   ~Sensore();
-  double get_healthbar();
+  virtual double get_healthbar() const;
+  virtual bool isDead() const;
+  virtual double getDanno() const;
+  virtual double calcolaDanno();
 };
+
+#endif
