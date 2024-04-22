@@ -1,7 +1,6 @@
 ```mermaid
 flowchart TD
-A{Sensore}-->B(Danno)
-B-->C(Contundente)
+B{Sensore}-->C(Contundente)
 B-->D(Magico)
 B-->E(Emotivo)
 C-->F(Fisico)
