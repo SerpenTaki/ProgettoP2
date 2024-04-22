@@ -5,7 +5,12 @@
 
 class Fisico : public Contundente, public Magico {
 private:
-public:
-};
+  int tipoFisico;
+  int debolezza;
 
+public:
+  Fisico();
+  ~Fisico();
+  double calcolaDanno();
+};
 #endif
