@@ -7,5 +7,6 @@ class Contundente : virtual public Sensore {
 
 public:
   Contundente();
+  ~Contundente();
   double calc_prob();
 };

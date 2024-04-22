@@ -3,15 +3,14 @@
 #include "Contundente.h"
 #include "Magico.h"
 
-class Fisico: public Contundente, public Magico{
+class Fisico : public Contundente, public Magico {
 private:
-    int tipoFisico;
-    int debolezza;
-public:
-    Fisico();
-    ~Fisico();
-    double calcolaDanno();
-    
-};
+  int tipoFisico;
+  int debolezza;
 
+public:
+  Fisico();
+  ~Fisico();
+  double calcolaDanno();
+};
 #endif
