@@ -3,7 +3,7 @@
 class Contundente : virtual public Sensore {
   enum tipo { abrasione, percossa, taglio };
   double indensita;
-  double prob;
+  int prob;
 
 public:
   Contundente();

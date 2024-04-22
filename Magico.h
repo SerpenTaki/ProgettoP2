@@ -6,6 +6,9 @@ class Magico : virtual public Sensore{
 private:
     double dannoMagico;
     int tipoMagico;
+    int durataMagia;
+    int prob;
+    
 public:
     Magico();
     ~Magico();
