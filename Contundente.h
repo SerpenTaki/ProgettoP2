@@ -7,5 +7,6 @@ class Contundente : public Sensore {
 
 public:
   Contundente();
+  ~Contundente();
   double calc_prob();
 };

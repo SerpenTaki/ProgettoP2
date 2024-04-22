@@ -3,11 +3,9 @@
 #include "Contundente.h"
 #include "Magico.h"
 
-class Fisico: public Contundente, public Magico{
+class Fisico : public Contundente, public Magico {
 private:
-
 public:
-
 };
 
 #endif
