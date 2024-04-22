@@ -1,3 +1,6 @@
+#ifndef CONTUNDENTE_H
+#define CONTUNDENTE_H
+
 #include "Sensore.h"
 
 class Contundente : virtual public Sensore {
@@ -10,3 +13,5 @@ public:
   ~Contundente();
   double calc_prob();
 };
+
+#endif
