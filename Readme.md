@@ -7,6 +7,7 @@ C-->F(Fisico)
 D-->F
 D-->G(Effetto)
 E-->G
+B-->H[Personaggio]
 ````
 ## momentaneo
 3h fatte il 22 aprile solo per iniziare progetto, bozza classi, definizione e differenziazione delle classi. 
