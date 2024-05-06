@@ -7,7 +7,6 @@ class Fisico : public Contundente, public Magico {
 private:
   int tipoFisico;
   int debolezza;
-
 public:
   Fisico();
   ~Fisico();

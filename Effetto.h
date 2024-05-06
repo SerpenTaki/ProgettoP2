@@ -8,7 +8,6 @@ class Effetto: public Magico, public Emotivo{
 private:
     double dannoEffetto;
     int durataEffetto;
-    
 public:
     Effetto();
     ~Effetto();

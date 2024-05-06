@@ -8,7 +8,6 @@ private:
     int tipoMagico;
     int durataMagia;
     int prob;
-    
 public:
     Magico();
     ~Magico();

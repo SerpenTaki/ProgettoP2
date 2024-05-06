@@ -6,7 +6,6 @@
 
 class Sensore {
 private:
-  bool isAlive;
   double danno;
 public:
   Sensore();

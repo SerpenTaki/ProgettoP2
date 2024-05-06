@@ -6,7 +6,6 @@ class Emotivo : virtual public Sensore {
 private:
   double dannoEmo;
   double durata;
-
 public:
   Emotivo();
   ~Emotivo();
