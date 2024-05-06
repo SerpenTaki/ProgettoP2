@@ -11,7 +11,6 @@ private:
 public:
     Effetto();
     ~Effetto();
-
     double calcolaDanno();
 };
 
