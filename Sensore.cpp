@@ -28,6 +28,6 @@ string Sensore::getDescrizione() const{
 }
 
 bool Sensore::checkStatus(bool status) const{
-    return checkStatus;
+    return status;
 }
 
