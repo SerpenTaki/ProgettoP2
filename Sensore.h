@@ -26,7 +26,7 @@ public:
   double calcolaDanno() const;
   string getDescrizione() const;
   //Altri metodi
-  bool checkStatus() const;
+  bool checkStatus(bool status) const;
 };
 
 #endif
