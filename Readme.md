@@ -1,13 +1,16 @@
+## Definizione della gerarchia
+
 ```mermaid
 flowchart TD
-B{Sensore}-->C(Contundente)
-B-->D(Magico)
-B-->E(Emotivo)
-C-->F(Fisico)
-D-->F
-D-->G(Effetto)
-E-->G
-B-->H[Personaggio]
+A[Personaggio]
+B{Sensore} --> C[Contundente]
+B --> D[Magico]
+C --> E(Taglio)
+C --> F(Percussione)
+E --> G(Abrasione)
+F --> G
+D --> H(Fuoco)
+D --> I(Acqua)
 ````
-## momentaneo
-3h fatte il 22 aprile solo per iniziare progetto, bozza classi, definizione e differenziazione delle classi. 
+
+## Classe Pesonaggio

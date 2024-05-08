@@ -6,10 +6,13 @@
 class Fisico : public Contundente, public Magico {
 private:
   int tipoFisico;
-  int debolezza;
+  int prob;
 public:
   Fisico();
   ~Fisico();
-  double calcolaDanno();
+
+
+  int calc_prob() const;
+  double calcolaDanno() const;
 };
 #endif

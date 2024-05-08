@@ -11,22 +11,20 @@ private:
   double danno;
   bool status; //indica se il sensore è attivo
   string descrizione;
-  unsigned int percorso_immagine;
-  int probHit;
 protected:
-  Sensore(double danno, bool status, string descrizione, unsigned int percorso_immagine, int probHit); //costruttore di default
+  //Sensore(double d, bool s, string desc, int prob): danno(d), status(s), descrizione(desc) {} //costruttore di default
 public:
   //distruttore virtuale
   virtual ~Sensore();
   //Metodi di Set
-  void setStatus(bool status);
-  void modStatus(bool status);
+  virtual void setStatus(bool status);
+  virtual void modStatus(bool status);
   //Metodi di Get
-  double getDanno() const;
-  double calcolaDanno() const;
-  string getDescrizione() const;
+  virtual double getDanno() const;
+  virtual double calcolaDanno() const;
+  virtual string getDescrizione() const;
   //Altri metodi
-  bool checkStatus(bool status) const;
+  virtual bool checkStatus(bool status) const;
 };
 
 #endif

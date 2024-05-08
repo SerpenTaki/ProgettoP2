@@ -7,13 +7,12 @@ private:
     double dannoMagico;
     int tipoMagico;
     int durataMagia;
-    int prob;
 public:
     Magico();
     ~Magico();
-    virtual int getTipo() const;
-    double calcolaDanno();
-
+    int getTipo() const;
+    int calcolaDurata() const;
+    double calcolaDanno() const;
 };
 
 #endif 

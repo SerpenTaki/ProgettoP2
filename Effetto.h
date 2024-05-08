@@ -11,7 +11,9 @@ private:
 public:
     Effetto();
     ~Effetto();
-    double calcolaDanno();
+    
+    int calcolaDurata() const;
+    double calcolaDanno() const;
 };
 
 #endif

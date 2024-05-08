@@ -3,14 +3,18 @@
 
 #include "Sensore.h"
 
-class Contundente : virtual public Sensore {
-  enum tipo { abrasione, percossa, taglio };
-  double indensita;
-  int prob;
+class Contundente : public Sensore {
+  int tipo;
+  double intensita;
+  int probHit;
 public:
-  Contundente();
+  Contundente(int t, double i, int prob): tipo(t), intensita(i), probHit(prob) {}
   ~Contundente();
-  double calc_prob();
+
+
+  virtual int calc_prob() const;
+  double calcolaDanno() const;
+
 };
 
 #endif

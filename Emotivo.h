@@ -6,11 +6,14 @@ class Emotivo : virtual public Sensore {
 private:
   double dannoEmo;
   double durata;
+  int probHit;
 public:
   Emotivo();
   ~Emotivo();
   // virtual int getTipo() const;
-  double calcolaDanno();
+  virtual int calcolaDurata() const;
+  int calcolaProbabilita() const;
+  double calcolaDanno() const;
 };
 
 #endif
