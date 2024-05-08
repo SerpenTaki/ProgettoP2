@@ -103,3 +103,11 @@ D --> I(Oscuro)
 ---
 ## Classe Oscuro
 **Metodi**:
+----
+
+Nella asse delle x del Qchart vado a segnare i turni mentre nella asse y vado a segnare il quantitativo di danno ricevuto ad ogni turno. casuali e non
+- rimuovere almeno una classe
+- 
+
+
+
