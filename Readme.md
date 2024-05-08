@@ -23,8 +23,8 @@ D --> I(Acqua)
 **Campi Dati**:
 - double HealthBar
 - int Livello
-- double Difesa
-- int(?) Armatura
+- double Difesa (la difesa viene moltiplicata per 2 a seconda del livello dell'armatura)
+- short int Armatura (da 1 a 5)
 
 --
 ## Classe Sensore (*Questa è la classe base astratta*)
@@ -43,4 +43,42 @@ D --> I(Acqua)
 - double mana;
 
 --
+## Classe Contundente
+**Metodi Virtuali**:
+- effetto()
+- consumoStamina()
+- critico()
+
+**Metodi**
+- sanguinamento()
+
+**Campi Dati**:
+- none
+
+--
+## Classe Taglio
+**Metodi Virtuali**
+- getProfondita()
+
+**Metodi**
+- getAffilatura()
+
+**Campi dati**:
+- int affilatura %
+- int Profondità %
+
+--
+
+## Classe Percussione
+**Metodo Virtuale**:
+- getTempo()
+
+**Campi dati**:
+- unsigned int tempo
+
+--
+
+## Abrasione
+- Solo metodi ereditati
+---
 
