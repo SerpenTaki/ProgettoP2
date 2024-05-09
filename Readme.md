@@ -5,14 +5,15 @@ Deve essere fornita la ricerca di un sensore tramite nome o id.
 Non è richiesta la simulazione turno per turno ma si può invece simulare una serie di turni.
 ---
 ## Definizione delle gerarchia
+
 ```mermaid
 flowchart TD
-A{Sensore}-->B(Fisico)
-A-->C{Magia}
-C-->(Fuoco)
-C-->(Acqua)
-C-->(Erba)
-A-->(Sacro)
+A{Sensore} --> B(Fisico)
+A --> C{Magia}
+C --> D(Fuoco)
+C --> E(Acqua)
+C --> F(Erba)
+A --> G(Sacro)
 ```
 ---
 ## Definizione delle classi
