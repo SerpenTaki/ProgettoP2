@@ -3,6 +3,7 @@ Realizzare un sensoreDanno che registra il numero di danni in base alla tipologi
 In ogni turno vengono registrati una serie di danni, il sensore registra la variazione a seconda della tipologia selezionata. E' possibile creare, eliminare e modificare il sensore.
 Deve essere fornita la ricerca di un sensore tramite nome o id.
 Non è richiesta la simulazione turno per turno ma si può invece simulare una serie di turni.
+
 ---
 ## Definizione delle gerarchia
 
