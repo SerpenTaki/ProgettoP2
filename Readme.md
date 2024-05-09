@@ -23,62 +23,61 @@ A --> G(Sacro)
 ### Classe *Astratta* SensoreDanno
 **Campi Dati:**
 - double danno
-- int probHit
-- double stamina
-- double mana
-- int probCrit
+- int probHit %
+- int probCrit %
 
 **Metodi:**
 - virtual double calcolaDanno()
 - virtual double getDanno()
 - virtual int getProbHit()
 - virtual int getProbCrit()
-- virtual double getMana()
-- virtual double getStamina()
 
 ---
 ### Classe Fisico
 **Campi Dati:**
-- int affilatura; % 
+- int affilatura; % *da richiedere all'utente altrimenti random*
 
 **Metodi:**
-- void consumoStamina()
 - int getAffilatura()
 
 ---
 ### Classe *Astratta* Magico
 **Campi Dati:**
-- lvMagia
+- int lvMagia
+- string status
 
 **Metodi:**
-- void consumoMana()
-- getLvMagia()
+- virtual int getLvMagia()
+- virtual string getStatus()
+- virtual setStatus() /*se il danno ad esempio è magiore del 20 allora setto lo stato bruciato/annegato/legato*/ specifico solo per la magia
+
+
 ---
 ### Classe Fuoco
 **Campi Dati:**
 
 **Metodi:**
-
+*override*
 ---
 ### Classe Acqua
 **Campi Dati:**
 
 **Metodi:**
-
+*ovverride*
 ---
 ### Classe Erba
 **Campi Dati:**
 
 **Metodi:**
-
+*ovverride*
 ---
 ### Classe Sacro
 **Campi Dati:**
-- lvFede
+- int lvFede
+- int limitBreak *quando il parametro raggiunge 10 hai vinto la partita, mostra*
 
 **Metodi:**
-- ricaricaMana()
-- ricaricaStamina()
 - getLvFede()
-
+- getlimitBreak()
+- bool checkLimit()
 ---
