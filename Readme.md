@@ -27,6 +27,7 @@ A --> G(Sacro)
 - double stamina
 - double mana
 - int probCrit
+
 **Metodi:**
 - virtual double calcolaDanno()
 - virtual double getDanno()
@@ -48,6 +49,7 @@ A --> G(Sacro)
 ### Classe *Astratta* Magico
 **Campi Dati:**
 - lvMagia
+
 **Metodi:**
 - void consumoMana()
 - getLvMagia()
@@ -73,6 +75,7 @@ A --> G(Sacro)
 ### Classe Sacro
 **Campi Dati:**
 - lvFede
+
 **Metodi:**
 - ricaricaMana()
 - ricaricaStamina()
