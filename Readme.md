@@ -1,113 +1,61 @@
-## Definizione della gerarchia
-
+# Scopo
+Realizzare un sensoreDanno che registra il numero di danni in base alla tipologia Fisico, oscuro, sacro, neutro, emotivo.
+In ogni turno vengono registrati una serie di danni, il sensore registra la variazione a seconda della tipologia selezionata. E' possibile creare, eliminare e modificare il sensore.
+Deve essere fornita la ricerca di un sensore tramite nome o id.
+Non è richiesta la simulazione turno per turno ma si può invece simulare una serie di turni.
+---
+## Definizione delle gerarchia
 ```mermaid
 flowchart TD
-A[Personaggio]
-B{Sensore} --> C[Contundente]
-B --> D[Magico]
-C --> E(Taglio)
-C --> F(Percussione)
-E --> G(Abrasione)
-F --> G
-D --> H(Sacro)
-D --> I(Oscuro)
-````
+A{Sensore}-->B(Fisico)
+A-->C{Magia}
+C-->(Fuoco)
+C-->(Acqua)
+C-->(Erba)
+A-->(Sacro)
+```
 ---
-## Classe Pesonaggio
-**Metodi**
-- getHealth()
-- getLivello()
-- getDifesa()
-- getArmatura()
-- getTipo
+## Definizione delle classi
 
-**Campi Dati**:
-- double HealthBar
-- int Livello
-- double Difesa (la difesa viene moltiplicata per 2 a seconda del livello dell'armatura)
-- short int Armatura (da 1 a 5)
-- short int tipo (0 neutro,  1 debole all'oscuro...)
+### Classe *Astratta* SensoreDanno
+**Campi Dati:**
+
+**Metodi:**
 
 ---
-## Classe Sensore (*Questa è la classe base astratta*)
-**Metodi virtuali**:
-- calcolaDanno()
-- getDanno()
-- getProbabilita()
-- Accetta() //*design pattern?*
-- getStamina()
-- getMana()
+### Classe Fisico
+**Campi Dati:**
 
-**Campi Dati**:
-- double danno;
-- int probabilita;
-- double stamina;
-- double mana;
+**Metodi:**
 
 ---
-## Classe Contundente
-**Metodi Virtuali**:
-- effetto()
-- consumoStamina()
-- critico()
+### Classe *Astratta* Magico
+**Campi Dati:**
 
-**Metodi**
-- sanguinamento()
-
-**Campi Dati**:
-- none
+**Metodi:**
 
 ---
-## Classe Taglio
-**Metodi Virtuali**
-- getProfondita()
+### Classe Fuoco
+**Campi Dati:**
 
-**Metodi**
-- getAffilatura()
-
-**Campi dati**:
-- int affilatura %
-- int Profondità %
+**Metodi:**
 
 ---
+### Classe Acqua
+**Campi Dati:**
 
-## Classe Percussione
-**Metodo Virtuale**:
-- getTempo()
-
-**Campi dati**:
-- unsigned int tempo
+**Metodi:**
 
 ---
+### Classe Erba
+**Campi Dati:**
 
-## Abrasione
-- Solo metodi ereditati
----
-
-## Classe Magia
-**Metodi Virtuali:**
-- debolezza()
-- consumoMana()
-- durataEffetto()
-- livelloMagia()
-
-**Campi Dati**:
-- none
+**Metodi:**
 
 ---
+### Classe Sacro
+**Campi Dati:**
 
-## Classe Sacro
-**Metodi**:
-
+**Metodi:**
 
 ---
-## Classe Oscuro
-**Metodi**:
-----
-
-Nella asse delle x del Qchart vado a segnare i turni mentre nella asse y vado a segnare il quantitativo di danno ricevuto ad ogni turno. casuali e non
-- rimuovere almeno una classe
-- 
-
-
-
