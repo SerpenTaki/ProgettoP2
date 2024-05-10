@@ -1,6 +1,4 @@
-#include < QApplication >
-#include < QLabel >
+#include <QApplication>
+#include <QLabel>
 
-int main(int argc, char *argv[]) {
-  // Defines an application object
-}
+int main(int argc, char *argv[]) {}
