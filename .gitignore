@@ -4,3 +4,4 @@ ProgettoP2
 .qmake.stash
 Makefile
 *.app
+*.pro
