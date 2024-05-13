@@ -1,5 +1,8 @@
+-xc++
+-std=c++14
 -I/usr/include/qt
 -I/usr/include/qt/QtWidgets/
+-I/usr/include/qt6/QtGui 
+-I/usr/include/qt6/QtCore 
 -DDEBUG
--std=c++17
 
