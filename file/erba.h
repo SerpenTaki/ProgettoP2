@@ -8,8 +8,7 @@
 class erba : public magico {
 private:
 public:
-  static const std::string ciao;
-//  static const std::string tipo;
+  static const std::string tipo;
   erba();
   ~erba();
   double getDanno() const;
@@ -21,6 +20,6 @@ public:
   std::string setStatus() const;
   double calcolaDanno();
 };
-// const std::string tipo = "Erba";
+const std::string tipo = "Erba";
 
 #endif

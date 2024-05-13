@@ -1,3 +1,3 @@
 #include "erba.h"
 
-const std::string erba::ciao = "erba";
+const std::string erba::tipo = "Erba";

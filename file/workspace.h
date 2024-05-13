@@ -50,7 +50,7 @@ public:
             fisico->setText("Stronziddio");
         }
         void new_sensore(){
-            QLabel* prova = new QLabel(QString::fromStdString(erba::ciao));
+            QLabel* prova = new QLabel(QString::fromStdString(erba::tipo));
             l_sensori->addWidget(prova);
         }
 };
