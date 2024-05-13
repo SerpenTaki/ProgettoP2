@@ -1,0 +1,5 @@
+-I/usr/include/qt
+-I/usr/include/qt/QtWidgets/
+-DDEBUG
+-std=c++17
+
