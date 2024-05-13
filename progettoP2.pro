@@ -22,4 +22,4 @@ HEADERS += file/acqua.h \
            file/magico.h \
            file/sacro.h \
            file/sensoreDanno.h
-SOURCES += file/fisico.cpp file/main.cpp file/sensoreDanno.cpp
+SOURCES += file/fisico.cpp file/main.cpp file/sensoreDanno.cpp file/erba.cpp
