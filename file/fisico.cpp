@@ -18,6 +18,5 @@ int fisico::getAffilatura() const{
 
 double fisico::calcolaDanno(){
     double nDanni = fisico::getDanno();
-
-    //....
+    
 }

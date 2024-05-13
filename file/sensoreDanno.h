@@ -8,8 +8,8 @@ using std::vector;
 class sensoreDanno{
 private:
     double danno;
-    int probHit;
-    int probCrit;
+    int probHit; //random
+    int probCrit; //random
     vector<double> totDanni;
 public:
     sensoreDanno(double d, int ph, int pc, vector<double> td): danno(d), probHit(ph), probCrit(pc), totDanni(td) {}
