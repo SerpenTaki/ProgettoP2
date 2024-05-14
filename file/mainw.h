@@ -31,6 +31,7 @@ public:
 public slots:
   void new_sensore() {
     QWidget *schifo = new window_add_sensor;
+    schifo->resize(230, 180);
     schifo->show();
   }
 };
