@@ -12,6 +12,7 @@
 class workspace : public QWidget {
 private:
   QVBoxLayout *l_sensori;
+  bmenu *menu;
 
 public:
   workspace(QWidget * = nullptr);

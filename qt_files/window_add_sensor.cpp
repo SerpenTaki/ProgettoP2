@@ -1,4 +1,4 @@
-#include "window_add_sensor.h"
+#include "headers/window_add_sensor.h"
 window_add_sensor::window_add_sensor(QWidget *parent) : QWidget(parent) {
   titolo = new QLabel(this);
   titolo->setText("Specificare il tipo di sensore:");
@@ -24,3 +24,4 @@ window_add_sensor::window_add_sensor(QWidget *parent) : QWidget(parent) {
           SLOT(onSelected()));
   setLayout(layout);
 }
+void window_add_sensor::onSelected() {}

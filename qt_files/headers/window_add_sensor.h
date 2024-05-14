@@ -19,5 +19,5 @@ private:
 public:
   window_add_sensor(QWidget * = nullptr);
 public slots:
-  void onSelected() {}
+  void onSelected();
 };

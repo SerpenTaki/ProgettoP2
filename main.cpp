@@ -1,4 +1,4 @@
-#include "mainw.h"
+#include "qt_files/headers/mainw.h"
 #include <QApplication>
 #include <QBoxLayout>
 #include <QGroupBox>

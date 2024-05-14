@@ -1,4 +1,4 @@
-#include "barramenu.h"
+#include "headers/barramenu.h"
 
 bmenu::bmenu(QMenuBar *parent) : QMenuBar(parent) {
   file = new QMenu("File");
