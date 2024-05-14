@@ -1,16 +1,37 @@
+#include "qbuttongroup.h"
 #include <QApplication>
-#include <QDialog>
+#include <QButtonGroup>
 #include <QLabel>
-#include <QMainWindow>
+#include <QLayout>
+#include <QPushButton>
+#include <QRadioButton>
 #include <QWidget>
 
 class window_add_sensor : public QWidget {
 private:
   QLabel *titolo;
+  QButtonGroup *gruppo;
+  QRadioButton *magico;
+  QRadioButton *fisico;
+  QPushButton *add = new QPushButton("Aggiungi sensore");
 
 public:
   window_add_sensor(QWidget *parent = nullptr) : QWidget(parent) {
     titolo = new QLabel(this);
     titolo->setText("Specificare il tipo di sensore:");
+    magico = new QRadioButton("Magico", this);
+    fisico = new QRadioButton("Fisico", this);
+    gruppo = new QButtonGroup;
+    QVBoxLayout *layout = new QVBoxLayout;
+    layout->addWidget(magico);
+    layout->addWidget(fisico);
+    layout->addWidget(add);
+    gruppo->addButton(magico);
+    gruppo->addButton(fisico);
+    connect(gruppo, SIGNAL(buttonClicked(QAbstractButton *)), this,
+            SLOT(onSelected()));
+    setLayout(layout);
   }
+public slots:
+  void onSelected() {}
 };
