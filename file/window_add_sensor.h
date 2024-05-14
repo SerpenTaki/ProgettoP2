@@ -13,25 +13,11 @@ private:
   QButtonGroup *gruppo;
   QRadioButton *magico;
   QRadioButton *fisico;
+  QRadioButton *sacro;
   QPushButton *add = new QPushButton("Aggiungi sensore");
 
 public:
-  window_add_sensor(QWidget *parent = nullptr) : QWidget(parent) {
-    titolo = new QLabel(this);
-    titolo->setText("Specificare il tipo di sensore:");
-    magico = new QRadioButton("Magico", this);
-    fisico = new QRadioButton("Fisico", this);
-    gruppo = new QButtonGroup;
-    QVBoxLayout *layout = new QVBoxLayout;
-    layout->addWidget(magico);
-    layout->addWidget(fisico);
-    layout->addWidget(add);
-    gruppo->addButton(magico);
-    gruppo->addButton(fisico);
-    connect(gruppo, SIGNAL(buttonClicked(QAbstractButton *)), this,
-            SLOT(onSelected()));
-    setLayout(layout);
-  }
+  window_add_sensor(QWidget * = nullptr);
 public slots:
   void onSelected() {}
 };
