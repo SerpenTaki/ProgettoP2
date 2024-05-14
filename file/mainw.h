@@ -17,7 +17,7 @@ public:
     QGroupBox *sensori = new QGroupBox;
     QGroupBox *prova = new QGroupBox;
     QVBoxLayout *l_prova = new QVBoxLayout;
-    QPushButton *b_addsensore = new QPushButton("Add Sensor");
+    QPushButton *b_addsensore = new QPushButton("Nuovo Sensore");
     l_sensori = new QVBoxLayout;
 
     sensori->setLayout(l_sensori);
