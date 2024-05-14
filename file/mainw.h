@@ -1,4 +1,6 @@
+#include "barramenu.h"
 #include "window_add_sensor.h"
+#include <QAction>
 #include <QApplication>
 #include <QBoxLayout>
 #include <QGroupBox>
@@ -19,6 +21,9 @@ public:
     QVBoxLayout *l_prova = new QVBoxLayout;
     QPushButton *b_addsensore = new QPushButton("Add Sensor");
     l_sensori = new QVBoxLayout;
+    // Barra menu
+    bmenu *menu = new bmenu;
+    main->setMenuBar(menu);
 
     sensori->setLayout(l_sensori);
     l_sensori->addWidget(b_addsensore);
@@ -30,8 +35,8 @@ public:
   }
 public slots:
   void new_sensore() {
-    QWidget *schifo = new window_add_sensor;
-    schifo->show();
+    QWidget *add_sensor = new window_add_sensor;
+    add_sensor->show();
   }
 };
 
