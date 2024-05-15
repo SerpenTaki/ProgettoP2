@@ -12,9 +12,11 @@ private:
     int probCrit; //random
     vector<double> totDanni;
 public:
+
     sensoreDanno(double d, int ph, int pc, vector<double> td): danno(d), probHit(ph), probCrit(pc), totDanni(td) {}
     virtual ~sensoreDanno();
     
+    static const std::string tipo;
     //Metodi getter
     virtual double getDanno() const;
     virtual int getProbHit() const;
