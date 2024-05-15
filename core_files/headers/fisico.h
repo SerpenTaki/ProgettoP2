@@ -7,6 +7,7 @@ class fisico : public sensoreDanno{
 private:
     int affilatura; //% da richiedere all'utente altrimenti random
 public:
+    static const std::string tipo;
     fisico();
     ~fisico();
     double getDanno() const;

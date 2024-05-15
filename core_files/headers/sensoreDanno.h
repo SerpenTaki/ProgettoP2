@@ -14,7 +14,7 @@ private:
 public:
     sensoreDanno(double d, int ph, int pc, vector<double> td): danno(d), probHit(ph), probCrit(pc), totDanni(td) {}
     virtual ~sensoreDanno();
-    
+
     //Metodi getter
     virtual double getDanno() const;
     virtual int getProbHit() const;

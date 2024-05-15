@@ -5,6 +5,8 @@
 
 class acqua : public magico{
 public:
+    static const std::string tipo;
+
     acqua();
     ~acqua();
 

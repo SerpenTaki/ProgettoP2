@@ -5,6 +5,8 @@
 
 class fuoco : public magico{
 public:
+    static const std::string tipo;
+
     fuoco();
     ~fuoco();
 

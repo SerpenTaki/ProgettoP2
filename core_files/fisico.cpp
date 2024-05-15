@@ -1,15 +1,17 @@
-#include "fisico.h"
+#include "headers/fisico.h"
+
+const std::string fisico::tipo = "Fisico";
 
 double fisico::getDanno() const{
-    return sensoreDanno::getDanno();
+    return getDanno();
 }
 
 int fisico::getProbHit() const{
-    return sensoreDanno::getProbHit();
+    return getProbHit();
 }
 
 int fisico::getProbCrit() const{
-    return sensoreDanno::getProbCrit();
+    return getProbCrit();
 }
 
 int fisico::getAffilatura() const{
@@ -18,5 +20,6 @@ int fisico::getAffilatura() const{
 
 double fisico::calcolaDanno(){
     double nDanni = fisico::getDanno();
-    
+    nDanni = nDanni * fisico::getAffilatura() / 10;
+    return nDanni;
 }

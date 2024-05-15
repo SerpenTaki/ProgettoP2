@@ -8,6 +8,8 @@ private:
     int lvFede;
     int limitbreak; // quando il parametro raggiunge 10 hai vinto la partita, mostra nuovo grafico del limit break
 public:
+    static const std::string tipo;
+
     sacro();
     ~sacro();
 
