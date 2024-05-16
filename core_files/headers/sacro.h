@@ -8,8 +8,6 @@ private:
     int lvFede; /* 0 , 1, 2 */
     int limitbreak; // quando il parametro raggiunge 10 hai vinto la partita, mostra nuovo grafico del limit break
     enum{fedeBassa, fedeMedia, fedeAlta};
-protected:
-    double calcolaDanno(); //stessa cosa di fisico
 public:
     static const std::string tipo;
 
@@ -22,6 +20,7 @@ public:
     double getHit() override;
     bool checkLimit();
     void updateLimitbreak();
+    double calcolaDanno();
 };
 
 #endif

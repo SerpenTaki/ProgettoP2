@@ -21,7 +21,6 @@ vector<double> sensoreDanno::getValoriGrafico() { //l'interfaccia grafica avrà 
         double dannoPerTurno = attacchiPerTurno[i] * calcolaDanno();
         result.push_back(dannoPerTurno);
     }
-
     return result;
 }//Questa non si ovverrida da nessuna parte
 
