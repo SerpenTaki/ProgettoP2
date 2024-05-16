@@ -5,9 +5,11 @@ double sensoreDanno::getDanno() const{
 }
 
 int sensoreDanno::getProbCrit() const{
+    /*random*/
     return probCrit;
 }
 
 int sensoreDanno::getProbHit() const{
+    /*random*/
     return probHit;
 }

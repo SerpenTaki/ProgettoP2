@@ -6,12 +6,16 @@ int fisico::getAffilatura() const{
     return affilatura;
 }
 
-double fisico::calcolaDanno(){
-    if(getProbHit() > 90){
-        return 0;
+double fisico::getHit(){ /*si collega all'interfaccia grafica*/
+    if( getProbHit() > 30 ){
+        return this->calcolaDanno();
     }
+    return 0.0;
+}
+
+double fisico::calcolaDanno(){ // assestante
     double nDanni = getDanno();
-    nDanni = nDanni * fisico::getAffilatura() / 10;
+    nDanni = nDanni * affilatura / 10;
     if (getProbCrit() > 75){
         nDanni = (nDanni * 30)/100;
         return nDanni;

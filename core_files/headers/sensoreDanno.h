@@ -21,7 +21,7 @@ public:
     int getProbCrit() const;
     //altro
     virtual double calcolaDanno();
-    
+    virtual double getHit();  
 };
 
 #endif
