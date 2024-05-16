@@ -2,24 +2,20 @@
 
 const std::string fisico::tipo = "Fisico";
 
-double fisico::getDanno() const{
-    return getDanno();
-}
-
-int fisico::getProbHit() const{
-    return getProbHit();
-}
-
-int fisico::getProbCrit() const{
-    return getProbCrit();
-}
-
 int fisico::getAffilatura() const{
     return affilatura;
 }
 
 double fisico::calcolaDanno(){
-    double nDanni = fisico::getDanno();
+    if(getProbHit() > 90){
+        return 0;
+    }
+    double nDanni = getDanno();
     nDanni = nDanni * fisico::getAffilatura() / 10;
-    return nDanni;
+    if (getProbCrit() > 75){
+        nDanni = (nDanni * 30)/100;
+        return nDanni;
+    }
+    else
+        return nDanni;
 }

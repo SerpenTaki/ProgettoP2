@@ -16,9 +16,9 @@ public:
     virtual ~sensoreDanno();
 
     //Metodi getter
-    virtual double getDanno() const;
-    virtual int getProbHit() const;
-    virtual int getProbCrit() const;
+    double getDanno() const;
+    int getProbHit() const;
+    int getProbCrit() const;
     //altro
     virtual double calcolaDanno();
     

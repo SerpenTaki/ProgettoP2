@@ -10,9 +10,6 @@ public:
     static const std::string tipo;
     fisico();
     ~fisico();
-    double getDanno() const;
-    int getProbHit() const;
-    int getProbCrit() const;
     int getAffilatura() const;
 
     double calcolaDanno();
