@@ -5,11 +5,11 @@
 
 class sacro: public sensoreDanno{
 private:
-    int lvFede;
-    static int limitbreak; // quando il parametro raggiunge 10 hai vinto la partita, mostra nuovo grafico del limit break
+    int lvFede; /* 0 , 1, 2 */
+    int limitbreak; // quando il parametro raggiunge 10 hai vinto la partita, mostra nuovo grafico del limit break
     enum{fedeBassa, fedeMedia, fedeAlta};
 protected:
-    double calcolaDanno();
+    double calcolaDanno(); //stessa cosa di fisico
 public:
     static const std::string tipo;
 
@@ -21,7 +21,7 @@ public:
     
     double getHit() override;
     bool checkLimit();
-    int calcolaLimit();
+    void updateLimitbreak();
 };
 
 #endif

@@ -10,7 +10,7 @@ int sacro::getlimitBreak() const{
     return limitbreak;
 }
 
-bool sacro::checkLimit(){
+bool sacro::checkLimit(){ /*Gestito dalla UI mi fa vincere magari pop-up*/
     if(limitbreak < 100)
         return false;
     else
@@ -18,7 +18,7 @@ bool sacro::checkLimit(){
 }
 
 double sacro::getHit(){ /*si collega all'interfaccia grafica*/
-    if( getProbHit() > 90 ){
+    if( getProbHit() > 80 ){
         return this->calcolaDanno();
     }
     return 0.0;
@@ -35,17 +35,18 @@ double sacro::calcolaDanno(){
     else{
         nDanni = nDanni * 65 / 10;
     }
-    limitbreak = calcolaLimit();
-
     if (getProbCrit() > 40){
         nDanni = (nDanni * 15)/100;
-        return nDanni;
     }
-    else
-        return nDanni;
+    updateLimitbreak();
+    return nDanni;
 }
 
-int sacro::calcolaLimit(){
+void sacro::updateLimitbreak(){
     /*Questo metodo mi calcola un numero random da 1 a 10 e mi restituisce il valore aggiornato di limit*/
-    return limitbreak;
+    int n = 7;
+    limitbreak = limitbreak + 7;
 }
+
+/*PER mostrare il grafico di limit la UI farà un cast da sensore a sacro. Se il cast va a buon fine chiama la funzione get grafico limit specifica di sacro*/
+//SU SACRO GABRIELE QUINDI DOVRAI IMPLEMENTARTI UNA TUA FUNZIONE CHE COMUNQUE SARà SIMILE a quella di sensore danno (nel senso che ritorna un vettore di qualcosa)
