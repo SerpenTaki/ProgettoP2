@@ -7,10 +7,13 @@
 
 class erba : public magico {
 private:
+
 public:
   static const std::string tipo;
+
   erba();
   ~erba();
+
   double getDanno() const;
   int getProbHit() const;
   int getProbCrit() const;
@@ -18,8 +21,8 @@ public:
 
   std::string getStatus() const;
   std::string setStatus() const;
+
   double calcolaDanno();
 };
-const std::string tipo = "Erba";
 
 #endif

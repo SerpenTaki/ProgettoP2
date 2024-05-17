@@ -2,6 +2,7 @@
 #define SENSOREDANNO_H
 
 #include<vector>
+#include<string>
 
 using std::vector;
 
@@ -10,18 +11,20 @@ private:
     double danno;
     int probHit; //random
     int probCrit; //random
-    vector<double> totDanni;
+protected:
+    vector<int> attacchiPerTurno;
 public:
-    sensoreDanno(double d, int ph, int pc, vector<double> td): danno(d), probHit(ph), probCrit(pc), totDanni(td) {}
+    sensoreDanno(double d, int ph, int pc, vector<int> tpt): danno(d), probHit(ph), probCrit(pc), attacchiPerTurno(tpt) {}
     virtual ~sensoreDanno();
-    
+
+    virtual vector<double> getValoriGrafico() final; //metodo per il grafico
     //Metodi getter
-    virtual double getDanno() const;
-    virtual int getProbHit() const;
-    virtual int getProbCrit() const;
+    double getDanno() const;
+    int getProbHit() const;
+    int getProbCrit() const;
     //altro
     virtual double calcolaDanno();
-    
+    virtual double getHit();  
 };
 
 #endif
