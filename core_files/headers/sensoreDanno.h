@@ -4,6 +4,8 @@
 #include<vector>
 #include<string>
 
+#include"../../qt_files/headers/visitor.h"
+
 using std::vector;
 
 class sensoreDanno{
@@ -25,6 +27,8 @@ public:
     //altro
     virtual double calcolaDanno();
     virtual double getHit();  
+    //per implementazione grafica
+    virtual void accept(visitor &visitor) = 0;
 };
 
 #endif

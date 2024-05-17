@@ -50,3 +50,8 @@ void sacro::updateLimitbreak(){
 
 /*PER mostrare il grafico di limit la UI farà un cast da sensore a sacro. Se il cast va a buon fine chiama la funzione get grafico limit specifica di sacro*/
 //SU SACRO GABRIELE QUINDI DOVRAI IMPLEMENTARTI UNA TUA FUNZIONE CHE COMUNQUE SARà SIMILE a quella di sensore danno (nel senso che ritorna un vettore di qualcosa)
+
+
+void sacro::accept(visitor &visitor){
+
+}

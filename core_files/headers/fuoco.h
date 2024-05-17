@@ -19,6 +19,9 @@ public:
     std::string setStatus() const;
     double calcolaDanno();
 
+    //per implementazione grafica
+    void accept(visitor &visitor);
+
 };
 
 #endif

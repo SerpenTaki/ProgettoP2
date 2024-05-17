@@ -21,6 +21,9 @@ public:
     bool checkLimit();
     void updateLimitbreak();
     double calcolaDanno();
+
+    //per implementazione grafica
+    void accept(visitor &visitor) override;
 };
 
 #endif

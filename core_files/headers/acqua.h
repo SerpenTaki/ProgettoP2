@@ -19,6 +19,7 @@ public:
     std::string setStatus() const;
     double calcolaDanno();
 
+    void accept(visitor &visitor);
 };
 
 #endif

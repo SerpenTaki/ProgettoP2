@@ -23,3 +23,7 @@ double fisico::calcolaDanno(){ // assestante
     else
         return nDanni;
 }
+
+void fisico::accept(visitor &visitor){
+    
+}

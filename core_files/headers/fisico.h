@@ -14,6 +14,9 @@ public:
 
     double getHit() override;
     double calcolaDanno();
+
+    //Per implementazione grafica
+    void accept(visitor &visitor) override;
 };
 
 #endif
