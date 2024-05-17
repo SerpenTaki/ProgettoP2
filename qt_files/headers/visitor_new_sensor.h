@@ -1,10 +1,11 @@
 #include "visitor.h"
+#include <QWidget>
 
 class visitor_new_sensor : public ::visitor {
 public:
-  void visit(erba *er) override;
-  void visit(acqua *aq) override;
-  void visit(fisico *fi) override;
-  void visit(fuoco *fu) override;
-  void visit(sacro *sa) override;
+  QWidget *visit(erba *) override;
+  QWidget *visit(acqua *) override;
+  QWidget *visit(fisico *) override;
+  QWidget *visit(fuoco *) override;
+  QWidget *visit(sacro *) override;
 };

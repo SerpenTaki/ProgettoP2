@@ -1,4 +1,6 @@
 #include "headers/window_new_sensor.h"
+#include "../core_files/headers/sensor_factory.h"
+#include "headers/visitor_new_sensor.h"
 window_new_sensor::window_new_sensor(QWidget *main, QWidget *parent)
     : QWidget(parent) {
   mainwindow = main;
@@ -22,21 +24,21 @@ window_new_sensor::window_new_sensor(QWidget *main, QWidget *parent)
 
   layout->addWidget(add);
 
-  gruppo->addButton(fisico);
-  gruppo->addButton(sacro);
-  gruppo->addButton(erba);
-  gruppo->addButton(fuoco);
-  gruppo->addButton(acqua);
+  gruppo->addButton(fisico, SensoreFactory::FISICO);
+  gruppo->addButton(sacro, SensoreFactory::SACRO);
+  gruppo->addButton(erba, SensoreFactory::ERBA);
+  gruppo->addButton(fuoco, SensoreFactory::FUOCO);
+  gruppo->addButton(acqua, SensoreFactory::ACQUA);
 
   connect(gruppo, SIGNAL(buttonClicked(QAbstractButton *)), this,
           SLOT(onSelected()));
   setLayout(layout);
 }
 void window_new_sensor::onSelected() {
-  QAbstractButton *selectedButton = gruppo->checkedButton();
-  if (selectedButton) {
-    if (selectedButton == fisico)
-      (mainwindow->layout)->addWidget(add_sensor(selectedButton));
+  int selected = gruppo->checkedId();
+  if (selected) {
+    // manca push nel vettore dei sensori nel main
+    SensoreFactory::creaSensore(selected);
   }
 }
 
