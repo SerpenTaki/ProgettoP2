@@ -7,7 +7,7 @@
 #include <QRadioButton>
 #include <QWidget>
 
-class window_add_sensor : public QWidget {
+class window_new_sensor : public QWidget {
 private:
   QLabel *titolo;
   QButtonGroup *gruppo;
@@ -16,10 +16,14 @@ private:
   QRadioButton *sacro;
   QRadioButton *fisico;
   QRadioButton *acqua;
+
+  QWidget *mainwindow;
   QPushButton *add = new QPushButton("Aggiungi sensore");
+  void new_sensor(QAbstractButton *);
 
 public:
-  window_add_sensor(QWidget * = nullptr);
+  window_new_sensor(QWidget *, QWidget * = nullptr);
+  void add_sensor(QAbstractButton *);
 public slots:
   void onSelected();
 };

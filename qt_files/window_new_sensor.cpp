@@ -1,5 +1,7 @@
-#include "headers/window_add_sensor.h"
-window_add_sensor::window_add_sensor(QWidget *parent) : QWidget(parent) {
+#include "headers/window_new_sensor.h"
+window_new_sensor::window_new_sensor(QWidget *main, QWidget *parent)
+    : QWidget(parent) {
+  mainwindow = main;
   titolo = new QLabel(this);
   titolo->setText("Specificare il tipo di sensore:");
 
@@ -30,4 +32,12 @@ window_add_sensor::window_add_sensor(QWidget *parent) : QWidget(parent) {
           SLOT(onSelected()));
   setLayout(layout);
 }
-void window_add_sensor::onSelected() {}
+void window_new_sensor::onSelected() {
+  QAbstractButton *selectedButton = gruppo->checkedButton();
+  if (selectedButton) {
+    if (selectedButton == fisico)
+      (mainwindow->layout)->addWidget(add_sensor(selectedButton));
+  }
+}
+
+void window_new_sensor::add_sensor(QAbstractButton *bottone) {}

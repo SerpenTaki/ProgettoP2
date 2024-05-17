@@ -1,6 +1,8 @@
 #include "headers/mainw.h"
+#include "../core_files/headers/sensoreDanno.h"
 #include <QMenuBar>
-workspace::workspace(QWidget *parent) : QWidget(parent) {
+workspace::workspace(std::list<sensoreDanno> *lista_sensori, QWidget *parent)
+    : QWidget(parent) {
   QHBoxLayout *main = new QHBoxLayout(this);
   QGroupBox *sensori = new QGroupBox;
   QGroupBox *prova = new QGroupBox;
@@ -20,8 +22,8 @@ workspace::workspace(QWidget *parent) : QWidget(parent) {
   connect(b_addsensore, &QPushButton::clicked, this, &workspace::new_sensore);
 }
 
-void workspace::new_sensore() {
-  QWidget *schifo = new window_add_sensor();
+void workspace::new_sensor() {
+  QWidget *schifo = new window_new_sensor(this);
   schifo->resize(230, 180);
   schifo->show();
 }
