@@ -13,10 +13,11 @@
 class workspace : public QWidget {
 private:
   bmenu *menu;
+  std::list<sensoreDanno *> *plista;
 
 public:
   QVBoxLayout *l_sensori;
-  workspace(std::list<sensoreDanno> *, QWidget * = nullptr);
+  workspace(std::list<sensoreDanno *> *, QWidget * = nullptr);
 public slots:
   void new_sensor();
 };

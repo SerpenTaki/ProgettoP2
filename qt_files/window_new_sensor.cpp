@@ -1,8 +1,11 @@
 #include "headers/window_new_sensor.h"
 #include "../core_files/headers/sensor_factory.h"
-#include "headers/visitor_new_sensor.h"
-window_new_sensor::window_new_sensor(QWidget *main, QWidget *parent)
+// #include "headers/visitor_new_sensor.h"
+window_new_sensor::window_new_sensor(std::list<sensoreDanno *> *lista_sensori,
+                                     QWidget *main, QWidget *parent)
     : QWidget(parent) {
+
+  plista = lista_sensori;
   mainwindow = main;
   titolo = new QLabel(this);
   titolo->setText("Specificare il tipo di sensore:");
@@ -37,8 +40,7 @@ window_new_sensor::window_new_sensor(QWidget *main, QWidget *parent)
 void window_new_sensor::onSelected() {
   int selected = gruppo->checkedId();
   if (selected) {
-    // manca push nel vettore dei sensori nel main
-    SensoreFactory::creaSensore(selected);
+    plista->push_back(SensoreFactory::creaSensore(selected));
   }
 }
 

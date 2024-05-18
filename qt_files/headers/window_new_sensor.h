@@ -1,3 +1,4 @@
+#include "../../core_files/headers/sensoreDanno.h"
 #include "qbuttongroup.h"
 #include <QApplication>
 #include <QButtonGroup>
@@ -9,6 +10,7 @@
 
 class window_new_sensor : public QWidget {
 private:
+  std::list<sensoreDanno *> *plista;
   QLabel *titolo;
   QButtonGroup *gruppo;
   QRadioButton *erba;
@@ -22,7 +24,8 @@ private:
   void new_sensor(QAbstractButton *);
 
 public:
-  window_new_sensor(QWidget *, QWidget * = nullptr);
+  window_new_sensor(std::list<sensoreDanno *> *, QWidget *,
+                    QWidget * = nullptr);
   void add_sensor(QAbstractButton *);
 public slots:
   void onSelected();
