@@ -7,7 +7,6 @@
 
 class erba : public magico {
 private:
-
 public:
   static const std::string tipo;
 
