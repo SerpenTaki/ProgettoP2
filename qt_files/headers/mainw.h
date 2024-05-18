@@ -1,5 +1,6 @@
+#include "../../core_files/headers/sensoreDanno.h"
 #include "barramenu.h"
-#include "window_add_sensor.h"
+#include "window_new_sensor.h"
 #include <QAction>
 #include <QApplication>
 #include <QBoxLayout>
@@ -11,13 +12,14 @@
 
 class workspace : public QWidget {
 private:
-  QVBoxLayout *l_sensori;
   bmenu *menu;
+  std::list<sensoreDanno *> *plista;
 
 public:
-  workspace(QWidget * = nullptr);
+  QVBoxLayout *l_sensori;
+  workspace(std::list<sensoreDanno *> *, QWidget * = nullptr);
 public slots:
-  void new_sensore();
+  void new_sensor();
 };
 
 #endif
