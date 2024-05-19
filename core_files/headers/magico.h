@@ -4,16 +4,21 @@
 #include "sensoreDanno.h"
 #include<string>
 
-class magico : sensoreDanno{
+using std::string;
+
+class magico :public sensoreDanno{
 private:
-    int lvMagia;
-    std::string status;
+    int lvMagia; //dall' 1 al 5
+    string status;
 public:
     magico();
     ~magico();
-    virtual int getLvMagia() const;
-    virtual std::string getStatus() const;
-    virtual std::string setStatus() const;
+    
+    int getLvMagia() const;
+    string getStatus() const;
+
+    virtual string setStatus();
+
 };
 
 #endif

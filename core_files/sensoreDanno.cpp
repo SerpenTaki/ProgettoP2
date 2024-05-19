@@ -14,6 +14,14 @@ int sensoreDanno::getProbHit() const{
     return probHit;
 }
 
+int sensoreDanno::getRand(){
+    std::random_device rd;
+    std::mt19937 gen(rd());
+    std::uniform_int_distribution<> dis(1, 100);
+    randN = dis(gen);
+    return randN;
+}
+
 vector<double> sensoreDanno::getValoriGrafico() { //l'interfaccia grafica avrà una lista di sensori e la ui andrà a chiamare il get sensore grafico che è condiviso
 // con il discorso che chiamano il calcola danno, definisco comportamento generico nella classe astratta ma di specifico ci sarà il calcola danno che cambierà
     vector<double> result;

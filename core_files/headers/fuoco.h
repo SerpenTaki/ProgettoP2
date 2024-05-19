@@ -4,20 +4,18 @@
 #include"magico.h"
 
 class fuoco : public magico{
+private:
+    bool isInStatus;
 public:
     static const std::string tipo;
 
     fuoco();
     ~fuoco();
 
-    double getDanno() const;
-    int getProbHit() const;
-    int getProbCrit() const;
-    int getLvMagia() const;
-
-    std::string getStatus() const;
-    std::string setStatus() const;
+    string setStatus();
     double calcolaDanno();
+    double getHit();
+
 
     //per implementazione grafica
     void accept(visitor &visitor);
