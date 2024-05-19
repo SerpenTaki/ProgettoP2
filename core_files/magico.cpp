@@ -8,3 +8,7 @@ string magico::getStatus() const{
     return status;
 }
 
+bool magico::checkCondition() const{
+    return isInStatus;
+}
+

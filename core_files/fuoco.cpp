@@ -16,8 +16,11 @@ double fuoco::getHit(){
 double fuoco::calcolaDanno(){
     double nDanni = getDanno();
     nDanni = nDanni + ((getLvMagia() / 2) * 2);
-    if(isInStatus == true){
+    if(checkCondition() == true){
         nDanni = nDanni + nDanni * 0.3;
+        if(getProbCrit() > 85){
+            nDanni = (nDanni * 20)/100;
+        }
         return nDanni;
     }
     setStatus();
@@ -26,7 +29,7 @@ double fuoco::calcolaDanno(){
 
 string fuoco::setStatus(){
     if (getRand() > 70){
-        isInStatus == true;
+        checkCondition() == true;
         return "Bruciato";
     }
     else

@@ -4,8 +4,6 @@
 #include"magico.h"
 
 class fuoco : public magico{
-private:
-    bool isInStatus;
 public:
     static const std::string tipo;
 
@@ -19,7 +17,6 @@ public:
 
     //per implementazione grafica
     void accept(visitor &visitor);
-
 };
 
 #endif
