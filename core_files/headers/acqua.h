@@ -10,14 +10,9 @@ public:
     acqua();
     ~acqua();
 
-    double getDanno() const;
-    int getProbHit() const;
-    int getProbCrit() const;
-    int getLvMagia() const;
-
-    std::string getStatus() const;
-    std::string setStatus() const;
+    std::string setStatus();
     double calcolaDanno();
+    double getHit();
 
     void accept(visitor &visitor);
 };
