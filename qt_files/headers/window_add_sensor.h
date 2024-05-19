@@ -11,13 +11,15 @@ class window_add_sensor : public QWidget {
 private:
   QLabel *titolo;
   QButtonGroup *gruppo;
-  QRadioButton *magico;
-  QRadioButton *fisico;
+  QRadioButton *erba;
+  QRadioButton *fuoco;
   QRadioButton *sacro;
+  QRadioButton *fisico;
+  QRadioButton *acqua;
   QPushButton *add = new QPushButton("Aggiungi sensore");
 
 public:
   window_add_sensor(QWidget * = nullptr);
 public slots:
-  void onSelected() {}
+  void onSelected();
 };

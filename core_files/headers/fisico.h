@@ -7,13 +7,12 @@ class fisico : public sensoreDanno{
 private:
     int affilatura; //% da richiedere all'utente altrimenti random
 public:
+    static const std::string tipo;
     fisico();
     ~fisico();
-    double getDanno() const;
-    int getProbHit() const;
-    int getProbCrit() const;
     int getAffilatura() const;
 
+    double getHit() override;
     double calcolaDanno();
 };
 

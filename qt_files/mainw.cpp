@@ -1,14 +1,18 @@
-#include "mainw.h"
+#include "headers/mainw.h"
+#include <QMenuBar>
 workspace::workspace(QWidget *parent) : QWidget(parent) {
   QHBoxLayout *main = new QHBoxLayout(this);
   QGroupBox *sensori = new QGroupBox;
   QGroupBox *prova = new QGroupBox;
   QVBoxLayout *l_prova = new QVBoxLayout;
   QPushButton *b_addsensore = new QPushButton("Nuovo Sensore");
+  menu = new bmenu;
+  main->setMenuBar(menu);
   l_sensori = new QVBoxLayout;
 
   sensori->setLayout(l_sensori);
   l_sensori->addWidget(b_addsensore);
+
   main->addWidget(sensori);
   prova->setLayout(l_prova);
   main->addWidget(prova);

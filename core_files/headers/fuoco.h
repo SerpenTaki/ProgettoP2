@@ -1,12 +1,14 @@
-#ifndef ACQUA_H
-#define ACQUA_H
+#ifndef FUOCO_H
+#define FUOCO_H
 
 #include"magico.h"
 
-class acqua : public magico{
+class fuoco : public magico{
 public:
-    acqua();
-    ~acqua();
+    static const std::string tipo;
+
+    fuoco();
+    ~fuoco();
 
     double getDanno() const;
     int getProbHit() const;
