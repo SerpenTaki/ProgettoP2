@@ -1,12 +1,14 @@
 #include "../../core_files/headers/sensoreDanno.h"
 #include "qbuttongroup.h"
-#include <QApplication>
+// #include <QApplication>
 #include <QButtonGroup>
 #include <QLabel>
 #include <QLayout>
 #include <QPushButton>
 #include <QRadioButton>
 #include <QWidget>
+
+class workspace;
 
 class window_new_sensor : public QWidget {
 private:
@@ -19,12 +21,12 @@ private:
   QRadioButton *fisico;
   QRadioButton *acqua;
 
-  QWidget *mainwindow;
+  workspace *mainwindow;
   QPushButton *add = new QPushButton("Aggiungi sensore");
   void new_sensor(QAbstractButton *);
 
 public:
-  window_new_sensor(std::list<sensoreDanno *> *, QWidget *,
+  window_new_sensor(std::list<sensoreDanno *> *, workspace *,
                     QWidget * = nullptr);
   void add_sensor(QAbstractButton *);
 public slots:

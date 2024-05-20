@@ -4,8 +4,8 @@
 workspace::workspace(std::list<sensoreDanno *> *lista_sensori, QWidget *parent)
     : QWidget(parent) {
   plista = lista_sensori;
+  sensori = new QGroupBox;
   QHBoxLayout *main = new QHBoxLayout(this);
-  QGroupBox *sensori = new QGroupBox;
   QGroupBox *prova = new QGroupBox;
   QVBoxLayout *l_prova = new QVBoxLayout;
   QPushButton *b_addsensore = new QPushButton("Nuovo Sensore");
@@ -24,7 +24,8 @@ workspace::workspace(std::list<sensoreDanno *> *lista_sensori, QWidget *parent)
 }
 
 void workspace::new_sensor() {
-  QWidget *schifo = new window_new_sensor(plista, this);
+  workspace *daje = this;
+  QWidget *schifo = new window_new_sensor(plista, daje);
   schifo->resize(230, 180);
   schifo->show();
 }

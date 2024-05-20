@@ -17,6 +17,7 @@ private:
 
 public:
   QVBoxLayout *l_sensori;
+  QGroupBox *sensori;
   workspace(std::list<sensoreDanno *> *, QWidget * = nullptr);
 public slots:
   void new_sensor();

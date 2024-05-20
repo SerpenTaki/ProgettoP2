@@ -6,5 +6,5 @@
 Vsensore::Vsensore(sensoreDanno *sensore) {
   nome = new QLabel(QString::fromStdString(sensore->nome));
   getType oggetto;
-  tipo = new QLabel(QString::fromStdString(oggetto.visit(sensore)));
+  // tipo = new QLabel(QString::fromStdString(oggetto.visit(sensore)));
 }

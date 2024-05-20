@@ -3,7 +3,7 @@
 #include <QWidget>
 
 class Vsensore : public QWidget {
-  QLabel *tipo;
+  // QLabel *tipo;
   QLabel *nome;
 
 public:
