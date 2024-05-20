@@ -1,4 +1,9 @@
 #include "getType.h"
+#include "../core_files/headers/acqua.h"
+#include "../core_files/headers/erba.h"
+#include "../core_files/headers/fisico.h"
+#include "../core_files/headers/fuoco.h"
+#include "../core_files/headers/sacro.h"
 #include <string>
 
 std::string getType::visit(const erba *er) const { return erba::tipo; }

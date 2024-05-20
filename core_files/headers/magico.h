@@ -1,6 +1,5 @@
 #ifndef MAGICO_H
 #define MAGICO_H
-
 #include "sensoreDanno.h"
 #include <string>
 

@@ -1,14 +1,15 @@
-#include "../core_files/headers/acqua.h"
-#include "../core_files/headers/erba.h"
-#include "../core_files/headers/fisico.h"
-#include "../core_files/headers/fuoco.h"
-#include "../core_files/headers/sacro.h"
+#ifndef VISITOR_H
+#define VISITOR_H
+
 #include <QWidget>
-class visitor : public ::acqua,
-                public ::erba,
-                public ::fisico,
-                public ::fuoco,
-                public ::sacro {
+
+class acqua;
+class erba;
+class fisico;
+class fuoco;
+class sacro;
+
+class visitor {
 public:
   virtual std::string visit(const erba *) const = 0;
   virtual std::string visit(const acqua *) const = 0;
@@ -16,3 +17,4 @@ public:
   virtual std::string visit(const fuoco *) const = 0;
   virtual std::string visit(const sacro *) const = 0;
 };
+#endif
