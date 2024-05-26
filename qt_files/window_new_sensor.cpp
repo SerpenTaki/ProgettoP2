@@ -1,6 +1,7 @@
 #include "headers/window_new_sensor.h"
 #include "../core_files/headers/sensor_factory.h"
 #include "headers/Vsensore.h"
+#include "headers/mainw.h"
 
 // #include "headers/visitor_new_sensor.h"
 window_new_sensor::window_new_sensor(std::list<sensoreDanno *> *lista_sensori,
@@ -42,8 +43,10 @@ window_new_sensor::window_new_sensor(std::list<sensoreDanno *> *lista_sensori,
 void window_new_sensor::onSelected() {
   int selected = gruppo->checkedId();
   if (selected) {
-    plista->push_back(SensoreFactory::creaSensore(selected));
-    mainwindow->l_sensori->addWidget(Vsensore ao);
+    sensoreDanno *sclerodiocane = SensoreFactory::creaSensore(selected);
+    plista->push_back(sclerodiocane);
+    Vsensore ao(sclerodiocane);
+    mainwindow->l_sensori->addWidget(&ao);
   }
 }
 

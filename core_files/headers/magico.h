@@ -9,6 +9,7 @@ private:
   std::string status;
 
 public:
+  void accept(visitor &) override;
   magico();
   ~magico();
   virtual int getLvMagia() const;

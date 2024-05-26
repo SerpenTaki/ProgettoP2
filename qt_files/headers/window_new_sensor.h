@@ -1,3 +1,5 @@
+#ifndef WINDOW_NEW_SENSOR_H
+#define WINDOW_NEW_SENSOR_H
 #include "../../core_files/headers/sensoreDanno.h"
 #include "qbuttongroup.h"
 // #include <QApplication>
@@ -32,3 +34,4 @@ public:
 public slots:
   void onSelected();
 };
+#endif // !WINDOW_NEW_SENSOR_H

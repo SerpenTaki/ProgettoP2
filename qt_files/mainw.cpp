@@ -1,17 +1,24 @@
 #include "headers/mainw.h"
 #include "../core_files/headers/sensoreDanno.h"
+#include "headers/barramenu.h"
+#include "headers/mainw.h"
+#include "headers/window_new_sensor.h"
+#include <QGroupBox>
+#include <QHBoxLayout>
 #include <QMenuBar>
+#include <QPushButton>
+#include <QVBoxLayout>
 workspace::workspace(std::list<sensoreDanno *> *lista_sensori, QWidget *parent)
     : QWidget(parent) {
   plista = lista_sensori;
   sensori = new QGroupBox;
+  l_sensori = new QVBoxLayout;
   QHBoxLayout *main = new QHBoxLayout(this);
   QGroupBox *prova = new QGroupBox;
   QVBoxLayout *l_prova = new QVBoxLayout;
   QPushButton *b_addsensore = new QPushButton("Nuovo Sensore");
   menu = new bmenu;
   main->setMenuBar(menu);
-  l_sensori = new QVBoxLayout;
 
   sensori->setLayout(l_sensori);
   l_sensori->addWidget(b_addsensore);

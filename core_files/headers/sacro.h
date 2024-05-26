@@ -11,6 +11,7 @@ private:
 
 public:
   static const std::string tipo;
+  void accept(visitor &) override;
 
   sacro();
   ~sacro();
