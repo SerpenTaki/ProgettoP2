@@ -13,6 +13,7 @@
 class workspace;
 
 class window_new_sensor : public QWidget {
+  Q_OBJECT
 private:
   std::list<sensoreDanno *> *plista;
   QLabel *titolo;
@@ -24,13 +25,13 @@ private:
   QRadioButton *acqua;
 
   workspace *mainwindow;
-  QPushButton *add = new QPushButton("Aggiungi sensore");
+  QPushButton *add;
   void new_sensor(QAbstractButton *);
 
 public:
   window_new_sensor(std::list<sensoreDanno *> *, workspace *,
                     QWidget * = nullptr);
-  void add_sensor(QAbstractButton *);
+  // void add_sensor(QAbstractButton *);
 public slots:
   void onSelected();
 };

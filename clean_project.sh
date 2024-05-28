@@ -17,7 +17,10 @@ for pattern in "${patterns[@]}"; do
 done
 
 # Generazione del progetto con qmake
-qmake -project
-sed -i '8i\QT += widgets' ProgettoP2.pro
-qmake
+qmake6 -project
+sed -i '8i\QT += widgets core gui' ProgettoP2.pro
+sed -i '9i\MOC = /usr/lib/qt6/moc' ProgettoP2.pro
+qmake6
+/usr/lib/qt6/moc qt_files/headers/window_new_sensor.h -o window_new_sensor.moc
+make -j12
 

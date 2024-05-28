@@ -2,15 +2,18 @@
 #include "../core_files/headers/sensor_factory.h"
 #include "headers/Vsensore.h"
 #include "headers/mainw.h"
+#include <iostream>
 
 // #include "headers/visitor_new_sensor.h"
 window_new_sensor::window_new_sensor(std::list<sensoreDanno *> *lista_sensori,
-                                     workspace *main, QWidget *parent)
+                                     workspace *cristo, QWidget *parent)
     : QWidget(parent) {
 
   plista = lista_sensori;
-  workspace *mainwindow = main;
+  // workspace *mainwindow = main;
   titolo = new QLabel(this);
+  add = new QPushButton("Aggiungi sensore");
+  mainwindow = cristo;
   titolo->setText("Specificare il tipo di sensore:");
 
   fisico = new QRadioButton("Fisico", this);
@@ -43,6 +46,7 @@ window_new_sensor::window_new_sensor(std::list<sensoreDanno *> *lista_sensori,
 void window_new_sensor::onSelected() {
   int selected = gruppo->checkedId();
   if (selected) {
+    std::cout << "porcodio\n";
     sensoreDanno *sclerodiocane = SensoreFactory::creaSensore(selected);
     plista->push_back(sclerodiocane);
     Vsensore ao(sclerodiocane);
@@ -50,4 +54,6 @@ void window_new_sensor::onSelected() {
   }
 }
 
-void window_new_sensor::add_sensor(QAbstractButton *bottone) {}
+#include "../window_new_sensor.moc"
+
+// void window_new_sensor::add_sensor(QAbstractButton *bottone) {}
