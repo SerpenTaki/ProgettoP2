@@ -1,8 +1,11 @@
-#include "headers/window_new_sensor.h"
+// #include "headers/window_new_sensor.h"
 #include "../core_files/headers/sensor_factory.h"
+#include "headers/Vsensore.h"
+#include "headers/mainw.h"
+#include <iostream>
 // #include "headers/visitor_new_sensor.h"
 window_new_sensor::window_new_sensor(std::list<sensoreDanno *> *lista_sensori,
-                                     QWidget *main, QWidget *parent)
+                                     workspace *main, QWidget *parent)
     : QWidget(parent) {
 
   plista = lista_sensori;
@@ -27,21 +30,29 @@ window_new_sensor::window_new_sensor(std::list<sensoreDanno *> *lista_sensori,
 
   layout->addWidget(add);
 
+  // in compilazione le righe commentate (credo) danno errore
+  // non so perché
   gruppo->addButton(fisico, SensoreFactory::FISICO);
-  gruppo->addButton(sacro, SensoreFactory::SACRO);
+  gruppo->addButton(sacro, SensoreFactory::SACRO); // errore
   gruppo->addButton(erba, SensoreFactory::ERBA);
-  gruppo->addButton(fuoco, SensoreFactory::FUOCO);
-  gruppo->addButton(acqua, SensoreFactory::ACQUA);
+  gruppo->addButton(fuoco, SensoreFactory::FUOCO); // errore
+  gruppo->addButton(acqua, SensoreFactory::ACQUA); // errore
 
   connect(gruppo, SIGNAL(buttonClicked(QAbstractButton *)), this,
           SLOT(onSelected()));
+  connect(add, &QPushButton::clicked, this, &window_new_sensor::addVsensor);
   setLayout(layout);
 }
+
 void window_new_sensor::onSelected() {
   int selected = gruppo->checkedId();
   if (selected) {
     plista->push_back(SensoreFactory::creaSensore(selected));
+    std::cout << "porcodio";
   }
 }
 
-void window_new_sensor::add_sensor(QAbstractButton *bottone) {}
+void window_new_sensor::addVsensor() {
+  Vsensore *cristo = new Vsensore(plista->back());
+  mainwindow->l_sensori->addWidget(cristo);
+}

@@ -8,7 +8,10 @@
 #include <QRadioButton>
 #include <QWidget>
 
+class workspace;
+
 class window_new_sensor : public QWidget {
+  Q_OBJECT
 private:
   std::list<sensoreDanno *> *plista;
   QLabel *titolo;
@@ -19,14 +22,15 @@ private:
   QRadioButton *fisico;
   QRadioButton *acqua;
 
-  QWidget *mainwindow;
+  workspace *mainwindow;
   QPushButton *add = new QPushButton("Aggiungi sensore");
   void new_sensor(QAbstractButton *);
 
 public:
-  window_new_sensor(std::list<sensoreDanno *> *, QWidget *,
+  window_new_sensor(std::list<sensoreDanno *> *, workspace *,
                     QWidget * = nullptr);
-  void add_sensor(QAbstractButton *);
+  void addVsensor();
+  // void add_sensor(QAbstractButton *);
 public slots:
   void onSelected();
 };

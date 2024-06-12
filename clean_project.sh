@@ -19,5 +19,7 @@ done
 # Generazione del progetto con qmake
 qmake -project
 sed -i '8i\QT += widgets' ProgettoP2.pro
+echo "OBJECTS_DIR = \$\$OUT_PWD/obj" >> ProgettoP2.pro
 qmake
+make -j$(nproc)
 
