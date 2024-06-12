@@ -1,6 +1,5 @@
 #ifndef MAGICO_H
 #define MAGICO_H
-
 #include "sensoreDanno.h"
 #include <string>
 
@@ -10,6 +9,7 @@ private:
   std::string status;
 
 public:
+  void accept(visitor &) override;
   magico();
   ~magico();
   virtual int getLvMagia() const;

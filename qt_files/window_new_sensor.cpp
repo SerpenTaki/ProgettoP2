@@ -1,4 +1,5 @@
 // #include "headers/window_new_sensor.h"
+#include "headers/window_new_sensor.h"
 #include "../core_files/headers/sensor_factory.h"
 #include "headers/Vsensore.h"
 #include "headers/mainw.h"
@@ -9,8 +10,10 @@ window_new_sensor::window_new_sensor(std::list<sensoreDanno *> *lista_sensori,
     : QWidget(parent) {
 
   plista = lista_sensori;
-  mainwindow = main;
+  // workspace *mainwindow = main;
   titolo = new QLabel(this);
+  add = new QPushButton("Aggiungi sensore");
+  mainwindow = main;
   titolo->setText("Specificare il tipo di sensore:");
 
   fisico = new QRadioButton("Fisico", this);

@@ -1,6 +1,7 @@
 #ifndef SENSOREDANNO_H
 #define SENSOREDANNO_H
 
+#include "../../visitor/visitor.h"
 #include <string>
 #include <vector>
 
@@ -15,6 +16,7 @@ protected:
   vector<int> attacchiPerTurno;
 
 public:
+  virtual void accept(visitor &) = 0;
   std::string nome;
   sensoreDanno(double d, int ph, int pc, vector<int> tpt)
       : danno(d), probHit(ph), probCrit(pc), attacchiPerTurno(tpt) {}

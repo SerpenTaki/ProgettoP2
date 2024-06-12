@@ -1,13 +1,10 @@
-# Cazzo è `factory`?
-Factory è un design pattern utilizzato in OOP, consta in una classe che racchiude metodi statici 
-(non è necessario invocare un oggetto per utilizzarne i metodi) per la creazione di **svariati tipi di oggetti** <br>
-Nel concreto:
-```mermaid
-graph LR
-A(Nuova finestra) --> | chiama | B(Factory)
-B --> | il quale caga | C(Sensore)
+# Macro ultimo commit 
+Non riuscivo a far andare la macro `Q_OBJECT`, necessaria per il funzionamento degli slot di Qt. 
+Ora non sembra dare problemi, tuttavia non compila ancora perché vanno implementati costruttori e metodi delle classi `core`.
 
-```
-## Perché ci sto lavorando? 
-Mi sono accorto che non ha ancora senso implementare visitor in quanto visitor serve per la manipolazione dei dati, 
-è un design pattern che mi risulterà utile più avanti, non appena avrò risolto questo punto.
+In soldoni:
+
+Io ho scritto uno script che funziona sulla mia macchina con arch, resetta il progetto ed esegue `moc` sui file che richiedono la sopracitata macro. 
+
+Non mi auspico minimamente che la macro funzioni su un pc diverso dal mio, ergo quando ci vediamo fai un pull sul Mac/MSI, proviamo a compilare e 
+risolvere le dipendenze, e per concludere posso adattare una versione di `clean_project.sh` al tuo ambiente di sviluppo. 
