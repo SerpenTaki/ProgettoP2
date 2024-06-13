@@ -11,7 +11,7 @@ private:
 public:
     static const std::string tipo;
 
-    sacro();
+    sacro(double d, int ph, int pc, vector<int> tpt, int lvFede, int limitbreak): sensoreDanno(d, ph, pc, tpt), lvFede(lvFede), limitbreak(limitbreak) { std::cout << "Oggetto sacro Creato" << std::endl; }
     ~sacro();
 
     int getLvFede() const;

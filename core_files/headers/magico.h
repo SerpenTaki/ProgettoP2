@@ -12,7 +12,7 @@ private:
     string status;
     bool isInStatus;
 public:
-    magico();
+    magico(double d, int ph, int pc, vector<int> tpt, int lvM, string stat, bool isInSta) : sensoreDanno(d, ph, pc, tpt), lvMagia(lvM), status(stat), isInStatus(isInSta) {std::cout << "Oggetto erba creato" << std::endl; }
     ~magico();
     
     int getLvMagia() const;

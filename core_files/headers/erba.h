@@ -9,8 +9,6 @@
 class erba : public magico {
 public:
   static const std::string tipo;
-
-  erba();
   ~erba();
 
   string setStatus();
