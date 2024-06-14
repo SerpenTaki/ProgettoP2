@@ -6,6 +6,16 @@ int sacro::getLvFede() const { return lvFede; }
 
 int sacro::getlimitBreak() const { return limitbreak; }
 
+sacro::sacro(double d, int ph, int pc, std::vector<int> tpt, int lvFede,
+             int limitbreak)
+    : sensoreDanno(d, ph, pc, tpt), lvFede(lvFede), limitbreak(limitbreak) {
+  std::cout << "Oggetto sacro Creato" << std::endl;
+}
+
+sacro::sacro() : sensoreDanno() {
+  std::cout << "Oggetto sacro Creato" << std::endl;
+}
+
 bool sacro::checkLimit() { /*Gestito dalla UI mi fa vincere magari pop-up*/
   if (limitbreak < 100)
     return false;

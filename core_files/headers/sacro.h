@@ -1,5 +1,6 @@
 #ifndef SACRO_H
 #define SACRO_H
+
 #include "sensoreDanno.h"
 
 class sacro : public sensoreDanno {
@@ -11,9 +12,10 @@ private:
 
 public:
   static const std::string tipo;
-  void accept(visitor &) override;
 
   sacro();
+  sacro(double d, int ph, int pc, vector<int> tpt, int lvFede, int limitbreak);
+
   ~sacro();
 
   int getLvFede() const;
@@ -22,7 +24,10 @@ public:
   double getHit() override;
   bool checkLimit();
   void updateLimitbreak();
-  double calcolaDanno();
+  double calcolaDanno() override;
+
+  // per implementazione grafica
+  void accept(visitor &) override;
 };
 
 #endif

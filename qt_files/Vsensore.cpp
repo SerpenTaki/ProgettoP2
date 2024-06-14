@@ -5,7 +5,7 @@
 #include <QVBoxLayout>
 
 Vsensore::Vsensore(sensoreDanno *sensore) {
-  nome = new QLabel(QString::fromStdString(sensore->nome));
+  nome = new QLabel(QString::fromStdString(sensore->getNome()));
   getType oggetto;
   QVBoxLayout *layout = new QVBoxLayout;
   layout->addWidget(nome);

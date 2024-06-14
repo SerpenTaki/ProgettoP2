@@ -6,19 +6,15 @@
 class fuoco : public magico {
 public:
   static const std::string tipo;
+  // per implementazione grafica
   void accept(visitor &) override;
 
   fuoco();
   ~fuoco();
 
-  double getDanno() const;
-  int getProbHit() const;
-  int getProbCrit() const;
-  int getLvMagia() const;
-
-  std::string getStatus() const;
-  std::string setStatus() const;
+  string setStatus();
   double calcolaDanno();
+  double getHit();
 };
 
 #endif

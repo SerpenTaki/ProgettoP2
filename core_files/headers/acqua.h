@@ -5,20 +5,16 @@ class visitor;
 
 class acqua : public magico {
 public:
+  // per implementazione grafica
   void accept(visitor &) override;
   static const std::string tipo;
 
   acqua();
   ~acqua();
 
-  double getDanno() const;
-  int getProbHit() const;
-  int getProbCrit() const;
-  int getLvMagia() const;
-
-  std::string getStatus() const;
-  std::string setStatus() const;
+  std::string setStatus();
   double calcolaDanno();
+  double getHit();
 };
 
 #endif
