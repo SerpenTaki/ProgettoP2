@@ -2,6 +2,7 @@
 #define MAGICO_H
 
 #include "sensoreDanno.h"
+
 #include <string>
 
 using std::string;
