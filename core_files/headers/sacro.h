@@ -3,6 +3,11 @@
 
 #include "sensoreDanno.h"
 
+using std::vector;
+using std::string;
+
+class sensoreDanno;
+
 class sacro: public sensoreDanno{
 private:
     int lvFede; /* 0 , 1, 2 */

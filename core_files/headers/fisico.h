@@ -3,7 +3,12 @@
 
 #include"sensoreDanno.h"
 
-class fisico : public sensoreDanno{
+using std::vector;
+using std::string;
+
+class sensoreDanno;
+
+class fisico : virtual public sensoreDanno{
 private:
     int affilatura; //% da richiedere all'utente altrimenti random
 public:

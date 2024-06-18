@@ -6,9 +6,10 @@
 #include<string>
 #include<random>
 
-#include"../../qt_files/headers/visitor.h"
+//#include"../../qt_files/headers/visitor.h"
 
 using std::vector;
+using std::string;
 
 class sensoreDanno{
 private:
@@ -32,7 +33,7 @@ public:
     virtual double calcolaDanno();
     virtual double getHit();  
     //per implementazione grafica
-    virtual void accept(visitor &visitor) = 0;
+    //virtual void accept(visitor &visitor) = 0;
 };
 
 #endif
