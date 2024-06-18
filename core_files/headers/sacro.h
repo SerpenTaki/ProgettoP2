@@ -26,8 +26,8 @@ public:
   void updateLimitbreak();
   double calcolaDanno() override;
 
-  // per implementazione grafica
-  void accept(visitor &) override;
+    //per implementazione grafica
+   // void accept(visitor &visitor) override;
 };
 
 #endif

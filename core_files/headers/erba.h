@@ -18,6 +18,9 @@ public:
   string setStatus();
   double calcolaDanno();
   double getHit();
+
+  //per grafica
+  //void accept(visitor &visitor);
 };
 
 #endif

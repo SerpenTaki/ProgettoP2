@@ -1,6 +1,10 @@
-#include "headers/sensoreDanno.h"
+#include"headers/sensoreDanno.h"
 
-sensoreDanno::sensoreDanno() { std::cout << "Oggetto creato" << std::endl; }
+sensoreDanno::sensoreDanno(double d, int ph, int pc, vector<int> tpt):
+danno(d), probHit(ph), probCrit(pc), attacchiPerTurno(tpt){
+    std::cout << "Oggetto Creato" << std::endl; 
+}
+
 
 sensoreDanno::sensoreDanno(double d, int ph, int pc, vector<int> tpt)
     : danno(d), probHit(ph), probCrit(pc), attacchiPerTurno(tpt) {

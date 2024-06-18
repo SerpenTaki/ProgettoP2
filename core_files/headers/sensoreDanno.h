@@ -6,27 +6,22 @@
 #include <string>
 #include <vector>
 
-#include "../../visitor/visitor.h"
+//#include "../../visitor/visitor.h"
 
 using std::vector;
 
 class sensoreDanno {
 private:
-  std::string nome;
-  double danno;
-  int probHit;  // random
-  int probCrit; // random
-  int randN;
-
+    double danno;
+    int probHit; //random
+    int probCrit; //random
+    int randN;
 protected:
-  vector<int> attacchiPerTurno;
-
+    vector<int> attacchiPerTurno;
 public:
-  sensoreDanno(double, int, int, vector<int>);
-
-  sensoreDanno();
+  
+  sensoreDanno(double d, int ph, int pc, vector<int> tpt);
   virtual ~sensoreDanno();
-
   virtual vector<double> getValoriGrafico() final; // metodo per il grafico
   // Metodi getter
   double getDanno() const;
@@ -38,7 +33,7 @@ public:
   virtual double calcolaDanno();
   virtual double getHit();
   // per implementazione grafica
-  virtual void accept(visitor &visitor) = 0;
+ //virtual void accept(visitor &visitor) = 0;
 };
 
 #endif

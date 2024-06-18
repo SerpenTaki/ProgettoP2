@@ -1,7 +1,10 @@
 #include "headers/erba.h"
 
 const std::string erba::tipo = "Erba";
-void erba::accept(visitor &sensore) { sensore.visit(this); }
+/*
+void erba::accept(visitor &visitor){
+    
+}*/
 
 double erba::getHit() {
   if (getProbHit() > 30) {

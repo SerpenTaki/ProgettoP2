@@ -2,6 +2,16 @@
 
 const std::string sacro::tipo = "Sacro";
 
+sacro::sacro(double d, int ph, int pc, vector<int> tpt, int lvFede, int limitbreak):
+sensoreDanno(d, ph, pc, tpt), lvFede(lvFede), limitbreak(limitbreak){
+    std::cout << "Oggetto sacro Creato" << std::endl;
+}
+
+sacro::sacro(double d, int ph, int pc, vector<int> tpt, int lvFede, int limitbreak):
+sensoreDanno(d, ph, pc, tpt), lvFede(lvFede), limitbreak(limitbreak){
+    std::cout << "Oggetto sacro Creato" << std::endl;
+}
+
 int sacro::getLvFede() const { return lvFede; }
 
 int sacro::getlimitBreak() const { return limitbreak; }
@@ -52,10 +62,11 @@ void sacro::updateLimitbreak() {
   int n = 7;
   limitbreak = limitbreak + 7;
 }
-/*PER mostrare il grafico di limit la UI farà un cast da sensore a sacro. Se il
- * cast va a buon fine chiama la funzione get grafico limit specifica di sacro*/
-// SU SACRO GABRIELE QUINDI DOVRAI IMPLEMENTARTI UNA TUA FUNZIONE CHE COMUNQUE
-// SARà SIMILE a quella di sensore danno (nel senso che ritorna un vettore di
-// qualcosa)
 
-void sacro::accept(visitor &sensore) { sensore.visit(this); }
+/*PER mostrare il grafico di limit la UI farà un cast da sensore a sacro. Se il cast va a buon fine chiama la funzione get grafico limit specifica di sacro*/
+//SU SACRO GABRIELE QUINDI DOVRAI IMPLEMENTARTI UNA TUA FUNZIONE CHE COMUNQUE SARà SIMILE a quella di sensore danno (nel senso che ritorna un vettore di qualcosa)
+
+/*
+void sacro::accept(visitor &visitor){
+
+}*/
